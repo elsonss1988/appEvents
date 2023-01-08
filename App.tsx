@@ -1,18 +1,24 @@
-import { View, Text } from "react-native";
+import { View, Text,StyleSheet } from "react-native";
 
 export default function App() {
   return(
-    <View style={{
-      flex:1,
-      backgroundColor:'#131016',
-      padding: 24
-      }}>
-      <Text style={{
-        color:'#FDFCFF',
-        fontSize: 24,
-        fontWeight:'bold',
-        marginTop: 48
-        }}>Hello World</Text>
+    <View style={styles.container}>
+      <Text style={styles.eventName}>Hello World</Text>
     </View>
   )
 }
+
+const styles = StyleSheet.create({
+  container:{
+    flex:1,
+    backgroundColor:'#131016',
+    padding: 24
+  },
+  eventName:{
+    color:'#FDFCFF',
+    fontSize: 24,
+    fontWeight:'bold',
+    marginTop: 48
+  }
+
+})
