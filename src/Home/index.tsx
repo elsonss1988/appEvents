@@ -15,10 +15,13 @@ function handleParticipantAdd() {
   }
   setParticipant(prevState => [...prevState,participantName])
   setParticipantName('');
-  console.log(participant);
+  // console.log(participant);
 }
 
 function handleParticipantRemove(name:String){
+
+  setParticipant(prevState => prevState.filter(participant => participant !== name))
+  // console.log(participant.filter(participant => participant !== name))
   Alert.alert(
     "Remover",
     `Deseja remover ${name} ?`,
